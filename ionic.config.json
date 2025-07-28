@@ -1,0 +1,7 @@
+{
+  "name": "ion-lithium",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
