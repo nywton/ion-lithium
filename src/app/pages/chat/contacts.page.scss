@@ -1,0 +1,8 @@
+/* Desktop/Web-specific override */
+@media (min-width: 768px) {
+  .lithium-header ion-toolbar {
+    --box-shadow: none;
+    --border-width: 0 0 1px 0;
+    --border-color: rgba(0, 0, 0, 0.08);
+  }
+}
