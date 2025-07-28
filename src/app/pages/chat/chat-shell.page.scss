@@ -1,0 +1,38 @@
+.chat-shell {
+  display: flex;
+  height: 100vh;
+}
+
+.contacts-panel {
+  width: 30%;
+  border-right: 1px solid #ccc;
+  overflow-y: auto;
+}
+
+.messages-panel {
+  width: 70%;
+  overflow-y: auto;
+}
+
+@media (max-width: 768px) {
+  .chat-shell {
+    flex-direction: column;
+  }
+
+  .contacts-panel {
+    width: 100%;
+  }
+
+  .messages-panel {
+    display: none;
+    width: 100%;
+  }
+
+  .chat-open .contacts-panel {
+    display: none;
+  }
+
+  .chat-open .messages-panel {
+    display: block;
+  }
+}
