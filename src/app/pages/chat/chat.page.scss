@@ -50,17 +50,37 @@
 }
 
 .chat-footer {
-  background: white;
+  background: #f2f2f7;
   border-top: 1px solid #ddd;
 }
 
 .input-area {
   align-items: center;
   padding: 8px 0;
+  background: #f2f2f7;
 }
 
 .chat-input {
   padding-left: 12px;
   padding-right: 12px;
   font-size: 15px;
+}
+
+.send-button {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+}
+
+.send-button ion-icon {
+  font-size: 20px;
+  color: white;
+}
+
+ion-item::part(native) {
+  background: #F2F2F7;
 }
