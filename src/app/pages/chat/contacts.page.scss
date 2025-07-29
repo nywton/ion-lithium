@@ -7,6 +7,15 @@
   }
 }
 
-.item-native {
-  background: #F2F2F7 !important;
+.initials-avatar {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  font-size: 16px;
+  text-transform: uppercase;
 }

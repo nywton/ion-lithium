@@ -8,8 +8,19 @@
   <ion-list>
     <ion-item *ngFor="let contact of contacts" [routerLink]="['/', 'chat']">
       <ion-avatar slot="start">
-        <img [src]="'https://api.dicebear.com/6.x/personas/svg?seed=' + contact.name" />
+        <!-- Show initials if no contact.image -->
+        <div
+          *ngIf="!contact.image"
+          class="initials-avatar"
+          [style.backgroundColor]="stringToColor(contact.name)"
+        >
+          {{ getInitials(contact.name) }}
+        </div>
+
+        <!-- Or use image if available -->
+        <img *ngIf="contact.image" [src]="contact.image" />
       </ion-avatar>
+
       <ion-label>
         <h2>{{ contact.name }}</h2>
         <p>{{ contact.lastMessage }}</p>

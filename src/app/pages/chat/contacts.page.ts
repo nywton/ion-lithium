@@ -12,7 +12,25 @@ import { RouterModule } from '@angular/router';
 })
 export class ContactsPage {
   contacts = [
-    { id: '1', name: 'Alice', lastMessage: 'Hey!', time: '10:45' },
-    { id: '2', name: 'Bob', lastMessage: 'See you later!', time: '10:30' },
+    { name: 'Alice Green', lastMessage: 'Hey!', time: '10:15', image: null },
+    { name: 'Bob Smith', lastMessage: 'See you soon.', time: '09:45', image: null },
+    { name: 'Chloe Yang', lastMessage: 'Good night', time: 'Yesterday', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQTiuB0TEIvT4-tfSczpgVraj7n44bQdaxgDhRckf6TBGSl7XdU8DdsrcpU-LekERdrjg&usqp=CAU' },
   ];
+
+  getInitials(name: string): string {
+    return name
+      .split(' ')
+      .map((part) => part[0])
+      .join('')
+      .toUpperCase()
+      .slice(0, 2);
+  }
+
+  stringToColor(name: string): string {
+    let hash = 0;
+    for (let i = 0; i < name.length; i++) {
+      hash = name.charCodeAt(i) + ((hash << 5) - hash);
+    }
+    return `hsl(${hash % 360}, 60%, 60%)`;
+  }
 }
