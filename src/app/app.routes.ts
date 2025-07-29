@@ -8,7 +8,6 @@ export const routes: Routes = [
     children: [
       { path: '', component: ContactsPage },
       { path: 'chat', component: ChatPage },
-      { path: '**', redirectTo: '' },
     ],
   },
 ];
